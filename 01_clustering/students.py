@@ -29,10 +29,9 @@ import csv as csv # csv
 ########################################
 
 #LEITURA DOS DADOS
+alunos_pap = pd.read_csv("C:\projects\01_clustering\dados\alunos_pap.csv")
 
-alunos_pap = pd.read_csv("C:\\projects\\01_clustering\\dados\\alunos_pap.csv", delimiter=",")
-
-# alunos_pap = open("C:\\projects\\01_clustering\\dados\\alunos_pap.csv","r") #, sep = ";", header = T, dec = ",")
+alunos_pap.shape()
 
 linhas = alunos_pap.readlines()
 

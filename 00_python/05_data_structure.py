@@ -170,41 +170,152 @@ set1.discard(80) # permite comando de exclusao de item que nao esteja na lista
 print((set1)) # inserção multipla
 
 # Sets com strings
+set1 = {'ana', 'bia', 'carol', 'dani'}
+set2 = {'alberto', 'bruno', 'carlos', 'dani'}
+set3 = {'AUAU', 'MIAU', 'MUuu', 'COCOCO'}
 
+set4 = set1.union(set2) # une removendo duplicados - mesmo funcionamento de sets com
+                        # strings e integers
+print(set4)
+
+set5 = set1.intersection(set2) # mantem apenas o inner
+print(set5)
+
+set6 = set3.union(set1.union(set2)) # juntando todos sets
+print(set6)
+
+set7 = (set1 | set2 | set3)
+print(set7)
 
 # Introdução a Dicionários
+aluno = {'nome':'Ana', 'idade':16,'nota final':'A', 'status':True}
+print(aluno['nome'])
 
 
 # Atualizando itens no dicionário
+aluno['nome'] = 'Jose'
+print(aluno['nome'])
 
+aluno.update({'nota final':'B'})
+print(aluno['nota final'])
+
+aluno.update({'endereco':'Av paulista, 900'})
+print(aluno.get('endereco', 'Nao existe'))
+
+del aluno['idade']
+print(aluno.get('idade', 'Nao existe'))
 
 # Looping dentro de um dicionário
+for i in aluno.keys():
+    print(i)
 
+for i in aluno.items():
+    print(i)
+
+for keys, values in aluno.items():
+    print(keys, values)
 
 # Visualizando Itens, Keys e Values
+aluno = {'nome':'Ana', 
+         'idade':16,
+         'nota final':'A', 
+         'status':True, 
+         'materias':['fisica', 'matematica', 'ingles']
+}
 
+print(aluno['materias'])
+print(aluno.get('materias'))
+print(len(aluno))
+print(aluno.keys())
+print(aluno.items())
 
 # Conhecendo a Função Lambda
+    # funcao pequena, sem nome
+    # pode ser usada dentro de outras funcoes
+    # pode ter varios argumentos e somente 1 expressao
+    # deixa codigo mais clean
 
+def soma10(x):
+    return x + 10
+
+print(soma10(10))   
+    
+soma_ten = lambda x: x + 10
+
+print(soma_ten(12))
+
+soma_complexa = lambda x, y: x + y + 10
+
+print(soma_complexa(2, 6))
 
 # Lambda dentro de uma função
-
+def calcula_idade(ano, mes):
+    if mes < 12: # ainda nao fez aniversario este ano
+        aux = lambda x: ano
+    return 2022 - aux(mes)
+    
+print(calcula_idade(1990, 1))
 
 # Função Map em uma lista
+lista1 = [1, 2, 3, 4]
 
+def multX(vlr):
+    return vlr * 2
+
+
+lista2 = map(multX, lista1) # com funcao map aplicamos uma funcao a cada item de uma lista
+print(list(lista2))
 
 # Função Map com Lambda
-
+print(list(map(lambda x: x * 2, lista1)))
 
 # Função Filter
+    # roda funcao dentro de uma lista (similar a map) e mostra resultado filtrado
+valores = [10, 20, 30, 40, 25, 15]
+def remove20(vlr):
+    return vlr > 20
 
-
+print(list(map(remove20, valores)))
+print(list(filter(remove20, valores)))  # mostra apenas os que entraram no
+                                        # criterio da funcao
 # Entendendo List Comprehension com Strings
+frutas1 = ['abacaxi', 'banana', 'caqui', 'damasco']
+frutas2 = []
 
+for item in frutas1:
+    if 'n' in item:
+        frutas2.append(item)
+
+print(frutas1)
+print(frutas2)
+
+frutas3 = [item for item in frutas1 if 'n' in item]
+
+print(frutas3)
 
 # Entendendo List Comprehension com números
+valores = []
 
+for vlr in range(6):
+    valores.append(vlr*10)
+    
+print(valores)
+
+valores2 = [x * 10 for x in range(6)]
+print(valores2)
 
 # Lista e Generator Expressions
 
+from sys import getsizeof
+
+numeros1 = [x * 10 for x in range(1000000)]
+print(type(numeros1))
+# print(numeros1)
+print(getsizeof(numeros1))
+
+print('-----')
+numeros2 = (x * 10 for x in range(1000000))
+print(type(numeros2))
+# print(list(numeros2))
+print(getsizeof(numeros2))
 

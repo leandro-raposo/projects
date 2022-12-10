@@ -23,12 +23,12 @@
 # Features
 00- Python academy
 00- Statistics review
-01- Machile learning - non supervised model: Clustering
-02- Machile learning - non supervised model: Factor analysis
-03- Machile learning - non supervised model: Analyze principal components
-04- Machile learning - non supervised model: Simple correspondence analysis
-05- Machile learning - non supervised model: Multiple correspondence analysis
-06- Machile learning - supervised  model: Linear regression
+01- Machile learning - unsupervised model: Clustering
+02- Machile learning - unsupervised model: Factor analysis
+03- Machile learning - unsupervised model: Analyze principal components
+04- Machile learning - unsupervised model: Simple correspondence analysis
+05- Machile learning - unsupervised model: Multiple correspondence analysis
+06- Machile learning - supervised model: Linear regression
 07- Machile learning - supervised model: Logistical regression
 08- Machile learning - supervised model: Binary regression
 09- Machile learning - supervised model: Counting models
@@ -43,7 +43,7 @@
 18- Text minning
 19- Data visualization
 20- Data engineering
-21- TBD
+21- MBA conclusion project
 
 # Tech stack
 - TBD

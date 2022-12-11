@@ -1,9 +1,12 @@
 
 # Uhuu! Desafios
 
-
 # If Else (Desafio) - Ponto do Steak
-
+    # rare          - selada
+    # medium rare   - 
+    # medium
+    # medium well
+    # well done
 
 # Funções (Desafio) - Calculadora para Pintura
 

@@ -22,4 +22,10 @@ from package.register import cliente
 cliente("Victor")
 
 # Aplicando um Modulo
+from package.findList import find_list
 
+lista = [1, 2, 3, 5, 6]
+
+item = 5
+
+print(f'O {item} está na posicao {find_list(lista, 5)} do vetor')

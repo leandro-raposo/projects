@@ -27,6 +27,27 @@ else:
 
 # Funções (Desafio) - Calculadora para Pintura
 
+class Tinta:
+    def __init__(self, rendimento, altura, largura):
+        self.rendimento = rendimento
+        self.altura = altura
+        self.largura = largura
+        self.area = altura * largura
+
+    def calc_rendimento(self):
+        return self.area / self.rendimento
+
+    # entradas
+rendimento = int(input('Qual o rendimento da tinta: '))
+altura = int(input('Qual a altura da parede: '))
+largura = int(input('Qual o largura da parede: '))
+
+# main
+pintura = Tinta(rendimento, altura, largura)
+qtd_latas = pintura.calc_rendimento()
+
+# output
+print(f"Para pintar uma area de {pintura.area} voce precisara de {qtd_latas} latas de tinta")
 
 # Sets (Desafio) - Filtrando funcionários em uma empresa
 

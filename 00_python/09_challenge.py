@@ -50,8 +50,42 @@ qtd_latas = pintura.calc_rendimento()
 print(f"Para pintar uma area de {pintura.area} voce precisara de {qtd_latas} latas de tinta")
 
 # Sets (Desafio) - Filtrando funcionários em uma empresa
+funcionarios = ['Ana', "Beatriz", "Caio", "Daniel"]
+turno_dia = ['Ana', 'Beatriz']
+turno_noite = ['Caio', 'Daniel']
+tem_carro = ['Beatriz', 'Caio']
 
+# tem carro e trabalha noite
+carro_dia = set(turno_dia).intersection(tem_carro)
+print(f'Funcionarios que tem carro e trabalham a noite {carro_dia}')
+# tem carro e trabalha dia
+carro_noite = set(turno_noite).intersection(tem_carro)
+print(f'Funcionarios que tem carro e trabalham a noite {carro_noite}')
+
+# nao tem carro
+nao_tem = set(funcionarios).difference(tem_carro)
+print(f'Funcionarios que tem carro e trabalham a noite {nao_tem}')
 
 # If Elif (Desafio) - Calculo de BMI
 
+def calc_imc(peso, altura):
+    return peso / (altura * altura)
 
+def define_titulo(imc):
+    if imc < 18.5:
+        return 'magreza'
+    elif imc < 24.9:
+        return 'normal'
+    elif imc < 29.9:
+        return 'sobrepeso'
+    elif imc < 39.9:
+        return 'obesidade'
+    else:
+        return 'obesidade grave'
+    
+
+peso = float(input(f'Qual seu peso: '))
+altura = float(input(f'Qual seu altura: '))
+imc = int(calc_imc(peso, altura))
+
+print(f'Com esta altura, pesando {peso} kg seu IMC é {imc} voce esta com peso {define_titulo(imc)} ')

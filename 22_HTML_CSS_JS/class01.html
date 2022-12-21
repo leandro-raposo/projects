@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titulo da pagina</title>
+        <script defer src="" >
+            // meu codigo javascript
+        </script>
+        <script defer src="arquivo.js" > // arquivo externo com JS 
+            // dentro da tag script, usar o atributo defer para melhorar o tmepo de
+                // carregamento da pagina
+        </script>
+        <noscript>
+            <!--   tag utilizada como container para outras tags, ex: tag de links, de estilo,
+                metatag, se script do navegador estiver desativado -->
+            <style>
+                .no-script{
+                    color:red;
+                }
+            </style>
+        </noscript>
+        <!-- tag link, utilizada para definir relacionamentos dentro do documento, ex:
+            vincular arquivo CSS externo para carregar os estilos da pagina
+            atributo midia, permite carregar diferentes estilos -->
+        <link href="arquivo.css" media="screen" rel="stylesheet">
+        <link rel="icon" type="image/png" size="16x16" href="favicon.png">
+        <style>
+            body{
+                background-color: aqua;
+                color: blueviolet;
+            }
+        </style>
+        <!-- metatags sao importantes principalmente para otimizacao de paginas -->
+        <meta name="description" content="html review">
+        <!-- charset define a codificacao de caracteres da pagina -->
+        <meta charset="utf-8">
+        <!-- robots instrui os robos de busca sobre a indexacao da pagina -->
+        <meta name="robots" content="follow">
+        <meta name="robots" content="index">
+        <meta name="robots" content="nofollow noindex">
+        <meta http-equiv="refresh" content="0; url=https://www.google.com/">
+    </head>
+    <body>
+        <p id="paragrafo" class="minhaclass">
+            Ola Mundo            
+        </p>
+    </body>
+</html>

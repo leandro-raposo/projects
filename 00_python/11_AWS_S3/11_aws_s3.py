@@ -1,6 +1,6 @@
 
 # Apresentação do Projeto
-
+    # S3 imagem resize
 
 # O Projeto
 

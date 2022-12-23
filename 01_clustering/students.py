@@ -29,6 +29,8 @@ import csv as csv # csv
 ########################################
 
 #LEITURA DOS DADOS
+
+# alunos_pap = pd.read_csv("arn:aws:s3:::01-student/alunos_pap.csv")
 alunos_pap = pd.read_csv("C:\projects\01_clustering\dados\alunos_pap.csv")
 
 alunos_pap.shape()

@@ -1,18 +1,20 @@
-########################################
-#
-#   CHAMANDO BIBLIOTECAS IMPORTANTES
-#
-########################################
 
-import pandas as pd
-import numpy as np
-import sklearn as sk
+pacotes <- c("tidyverse","knitr","kableExtra","car","rgl","gridExtra",
+             "PerformanceAnalytics","reshape2","rayshader","psych","pracma",
+             "polynom","rqPen","ggrepel")
 
-########################################
-#
-#         ANALISE DE NOTAS DE ALUNOS
-#
-########################################
+if(sum(as.numeric(!pacotes %in% installed.packages())) != 0){
+  instalador <- pacotes[!pacotes %in% installed.packages()]
+  for(i in 1:length(instalador)) {
+    install.packages(instalador, dependencies = T)
+    break()}
+  sapply(pacotes, require, character = T) 
+} else {
+  sapply(pacotes, require, character = T) 
+}
+
+
+# Abordagem Teórica -------------------------------------------------------
 
 # Carregando a base de dados
 load("notasfatorial.RData")
@@ -558,4 +560,3 @@ correlacoes_entre_fatores_df %>%
        y = paste("Dimensão 2", paste0("(",round(var_compartilhada[2] * 100, 
                                                 digits = 2),"%)"))) +
   theme_bw()
-

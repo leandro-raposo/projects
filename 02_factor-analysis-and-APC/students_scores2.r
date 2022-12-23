@@ -1,18 +1,19 @@
-########################################
-#
-#   CHAMANDO BIBLIOTECAS IMPORTANTES
-#
-########################################
+pacotes <- c("plotly","tidyverse","knitr","kableExtra","PerformanceAnalytics",
+             "factoextra","reshape2","psych","ggrepel")
 
-import pandas as pd
-import numpy as np
-import sklearn as sk
+if(sum(as.numeric(!pacotes %in% installed.packages())) != 0){
+  instalador <- pacotes[!pacotes %in% installed.packages()]
+  for(i in 1:length(instalador)) {
+    install.packages(instalador, dependencies = T)
+    break()}
+  sapply(pacotes, require, character = T) 
+} else {
+  sapply(pacotes, require, character = T) 
+}
 
-########################################
-#
-#         ANALISE DE NOTAS DE ALUNOS
-#
-########################################
+# Aplicação do algoritmo --------------------------------------------------
+
+# Continuaremos a utilizar o primeiro exemplo, com dados da base notas fatorial
 
 # Carregando a base de dados
 load("notasfatorial.RData")
@@ -191,5 +192,3 @@ notasfatorial %>%
   kable_styling(bootstrap_options = "striped", 
                 full_width = T, 
                 font_size = 12)
-
-# Fim da parte prática ----------------------------------------------------

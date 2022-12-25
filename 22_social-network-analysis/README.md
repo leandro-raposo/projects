@@ -1,4 +1,7 @@
-<h1 align="center"> Python academy </h1>
+<h1 align="center"> Social network analysis </h1>
+
+# Access here
+https://miro.com/app/board/uXjVPABfn2c=/?share_link_id=57138990598
 
 # Badges
 ![GitHub Org's stars](https://img.shields.io/github/stars/leandro-raposo?style=social)
@@ -6,6 +9,7 @@
 
 # Summary 
 
+* [Objective](#objective)
 * [Status](#status)
 * [Features](#features)
 * [Tech stack](#tech-stack)
@@ -13,32 +17,30 @@
 * [Contributors](#contributors)
 
 # Objective
-- The objective of this project is to register a path of learning Python from basics
+- The objective of this project is to create an environment in AWS for data storage
 
 # Status
 > :construction: Under construction :construction:
 
 # Features
-01- Python basics
-02- Mathematics
-03- Flow control
-04- Functions
-05- Data structure
-06- Errors
-07- Object oriented programming
-08- Modules
-09- TBD
-10- TBD
-11- TBD
-12- TBD
-13- TBD
-14- TBD
+- Collect
+- Storage
+- Update
+- Validation
+- Availability
+- Catalog
 
 # Tech stack
-- Python
+- AWS S3
+- AWS Lambda
+- AWS EMR
+- AWS EC2
+- Parquet files
 
 # Developers
 | [<img src="https://avatars.githubusercontent.com/u/79737458?v=4" width=115><br><sub>Leandro Raposo</sub>](https://github.com/leandro-raposo) |
 | :---: |
 
 # Contributors
+| [<img src="https://avatars.githubusercontent.com/u/40493928?v=4" width=115><br><sub>Bruno Jardim</sub>](https://github.com/brunojardim) |
+| :---: |

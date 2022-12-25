@@ -1,41 +1,26 @@
-<h1 align="center"> Python academy </h1>
+<h1 align="center"> Web development </h1>
 
 # Badges
 ![GitHub Org's stars](https://img.shields.io/github/stars/leandro-raposo?style=social)
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=WORK%20IN%20PROGRESS&color=GREEN&style=for-the-badge)
 
-# Summary 
-
-* [Status](#status)
-* [Features](#features)
-* [Tech stack](#tech-stack)
-* [Developers](#developers)
-* [Contributors](#contributors)
-
 # Objective
-- The objective of this project is to register a path of learning Python from basics
+- Creation of html and javascript projects to create a website 
 
 # Status
 > :construction: Under construction :construction:
 
-# Features
-01- Python basics
-02- Mathematics
-03- Flow control
-04- Functions
-05- Data structure
-06- Errors
-07- Object oriented programming
-08- Modules
-09- TBD
-10- TBD
-11- TBD
-12- TBD
-13- TBD
-14- TBD
+# Summary 
 
-# Tech stack
-- Python
+* [Class 01](#class01)
+
+# CLass01
+1- Intro: 
+2- Problem: 
+3- Solution: 
+4- Tech stack: Python, Pandas, Numpy, Sickit learn
+5- Results: 
+6- Next steps: 
 
 # Developers
 | [<img src="https://avatars.githubusercontent.com/u/79737458?v=4" width=115><br><sub>Leandro Raposo</sub>](https://github.com/leandro-raposo) |

@@ -17,9 +17,9 @@
 * [MC Donalds](#mc-donalds)
 
 # Students grouping
-1- Intro: 
-2- Problem: 
-3- Solution: 
+1- Intro: A school need to grop students from same age to split in different rooms for classes 
+2- Problem: How to group students by using the strenghts on subjects?
+3- Solution: By using k-means, we can plot students scores and group by proximity
 4- Tech stack: Python, Pandas, Numpy, Sickit learn
 5- Results: 
 6- Next steps: 

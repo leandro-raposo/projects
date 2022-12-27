@@ -1,69 +1,34 @@
-########################################
-#
-#   CHAMANDO BIBLIOTECAS IMPORTANTES
-#
-########################################
 
-import pandas as pd # dados
-import numpy as np # dados
-import csv as csv # csv
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, linkage
+from package.awsLogin import login as al # login aws
 
-# from sklearn.cluster import KMeans 
-# import arrow as ar
-# import matplotlib.pyplot as plt
-# import sklearn as sk
-# from sklearn.datasets import load_iris
-# import seaborn as sns
-# import tensorflow as tf
-# import tensorflow_datasets as tfds
-# import theano as th
-# import matplotlib as mpl
-# import seaborn as sns
-# import seaborn.objects as so
-# import tensorflow as tf
+# CLUSTER HIERARQUICO - juntos
 
-########################################
-#
-#         CLUSTER HIERARQUICO - juntos
-#
-########################################
+#sync aws
+client = al.login()
 
 #LEITURA DOS DADOS
+client.download_file("leandro-raposo-projects", "clustering/alunos_pap.csv", "alunos_pap.csv")
+alunos_pap = open("alunos_pap.csv").readlines()
+# print(alunos_pap.readlines())
 
-# alunos_pap = pd.read_csv("arn:aws:s3:::01-student/alunos_pap.csv")
-alunos_pap = pd.read_csv("C:\projects\01_clustering\dados\alunos_pap.csv")
+df = pd.DataFrame(alunos_pap[1:], columns=['Aluno','Matematica','Portugues'])
 
-alunos_pap.shape()
-
-linhas = alunos_pap.readlines()
-
-# print(alunos_pap.readlines()) # View(alunos_pap)
-
-print("---")
-
-# df = pd.DataFrame(alunos_pap)
-
-print(linhas)
-
-'''
-alunos_pap = alunos_pap[,-1]
-
-#CALCULANDO MATRIZ DE DISTANCIAS
-d = dist(alunos_pap, method = "euclidean")
+print(alunos_pap)
+print(df)
 
 #DEFININDO O CLUSTER A PARTIR DO METODO ESCOLHIDO
 #metodos disponiveis "average", "single", "complete" e "ward.D"
-hc1 = hclust(d, method = "single" )
-hc2 = hclust(d, method = "complete" )
-hc3 = hclust(d, method = "average" )
-hc4 = hclust(d, method = "ward.D" )
+linkage_data = linkage(df, method='ward', metric='euclidean')
+dendrogram(linkage_data)
 
 #DESENHANDO O DENDOGRAMA
-plot(hc1, cex = 0.6, hang = -1)
-plot(hc2, cex = 0.6, hang = -1)
-plot(hc3, cex = 0.6, hang = -1)
-plot(hc4, cex = 0.6, hang = -1)
+plt.show()
 
+'''
 #BRINCANDO COM O DENDOGRAMA PARA 2 GRUPOS
 rect.hclust(hc4, k = 2)
 

@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, linkage
-from package.awsLogin import login as al # login aws
+from awsLogin.awsLogin import login as al # login aws
 
 # CLUSTER HIERARQUICO - juntos
 

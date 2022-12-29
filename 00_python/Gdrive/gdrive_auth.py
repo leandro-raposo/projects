@@ -11,3 +11,7 @@ def authenticate_implicit_with_adc(project_id="your-google-cloud-project-id"):
         print(bucket.name)
     print("Listed all storage buckets.")
 
+
+auto = authenticate_implicit_with_adc('solar-dialect-373018')
+
+print(auto)

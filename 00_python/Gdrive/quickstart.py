@@ -1,29 +1,21 @@
 from __future__ import print_function
-
 import os.path
-
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-# If modifying these scopes, delete the file token.json.
+# If modifying these scopes, delete the file token.json
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
-# The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'
-SAMPLE_RANGE_NAME = 'Class Data!A2:E'
-
+# The ID and range of a sample spreadsheet
+SAMPLE_SPREADSHEET_ID = '1tWpN5fkb0aiBzqb9_tBhio98vKSDEziqliUeuPjuYRM'
+SAMPLE_RANGE_NAME = 'Página1!A1:C18'
 
 def main():
-    """Shows basic usage of the Sheets API.
-    Prints values from a sample spreadsheet.
-    """
     creds = None
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
+    # The file token.json is created when the auth flow completes 1st time
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
     # If there are no (valid) credentials available, let the user log in.
@@ -53,7 +45,7 @@ def main():
 
         print('Name, Major:')
         for row in values:
-            # Print columns A and E, which correspond to indices 0 and 4.
+            # Print content - corrigir
             print('%s, %s' % (row[0], row[4]))
     except HttpError as err:
         print(err)

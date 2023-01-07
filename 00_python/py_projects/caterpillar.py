@@ -1,19 +1,21 @@
-
-
-'''
-Setting the properties of leaf and the caterpillar.
-Set the starting values like the speed and size of the caterpillar at the start of the game and the score of the game.
-The caterpillar to move forward, here I will be using the if and else statements; to check if the caterpillar has made contact with the leaf or not.
-If the caterpillar has not made contact with the leaf we will check that whether it has left the screen or not, if it has left the screen we will stop the game and show the game over.
-If the caterpillar has now left the screen we will move the leaf in a now random position and increase the size of the caterpillar and increase the score. 
-Keep repeating this process.
-'''
-
 import turtle as t
 import random as rd
 
+'''
+The caterpillar to move forward, here I will be using the if and else statements; 
+to check if the caterpillar has made contact with the leaf or not.
+If the caterpillar has not made contact with the leaf we will check that whether 
+it has left the screen or not, if it has left the screen we will stop the game and
+show the game over.
+If the caterpillar has now left the screen we will move the leaf in a now random 
+position and increase the size of the caterpillar and increase the score. 
+Keep repeating this process.
+'''
+
+# Setting the properties of leaf and the caterpillar.
 t.bgcolor('yellow')
 
+# Starting values like the speed, size and score of the caterpillar
 caterpillar = t.Turtle()
 caterpillar.shape('square')
 caterpillar.color('red')

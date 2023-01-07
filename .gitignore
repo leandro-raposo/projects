@@ -1,1 +1,5 @@
 /.vscode
+00_python/py_projects/awsLogin.py
+credentials.json
+key.json
+00_python/py_projects/__pycache__/awsLogin.cpython-310.pyc

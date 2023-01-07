@@ -1,5 +1,5 @@
 
-import awsLogin.awsLogin as al
+import awsLogin as al
 
 # s3uploader
 client = al.login()

@@ -31,7 +31,8 @@ control_data.columns = ["Campaign Name", "Date", "Amount Spent",
 
 test_data.columns = ["Campaign Name", "Date", "Amount Spent", 
                         "Number of Impressions", "Reach", "Website Clicks", 
-                        "Searches Received"]
+                        "Searches Received", "Content Viewed", "Added to Cart",
+                        "Purchases"]
 
 # check for null values
 print(control_data.isnull().sum())
